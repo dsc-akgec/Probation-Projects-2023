@@ -1,7 +1,36 @@
 # Probation-Projects-2023
-Task 1
-<h2>https://viditasingh.github.io/index.html</h2>
-<br>Task consists of a responsive landing page and a contact form
-<br> the contact form can toggle between themes(light and dark).
+
+Welcome to GDSC-AKGEC Probation Projects for 2023!
 <br><br>
-both the  pages are linked to each other by using contact us in landing page and home in contact form
+## How to add your project to this repository?
+<br>
+1. Fork the repository into your account<br>
+2. Clone the repository into your locale<br>
+
+```sh
+git clone https://github.com/{your_id}/Probation-Projects-2023.git
+```
+<br>
+3. Create a branch using 
+   
+```sh
+git branch {branch_name}
+``` 
+<br>
+4. Checkout the branch using 
+   
+```sh
+git checkout {branch_name}
+``` 
+<br>
+5. Make a folder with folder name {Name_Surname} and put in all the files in the folder <b>Remember to remove .git folder from the files otherwise we will not be able to access the folder</b><br><br>
+6. Commit the changes on the branch<br><br>
+7. Push the branch to the repository using 
+
+```sh
+git push origin {branch_name}
+``` 
+<br>
+8. Go to Github and create a Pull Request for the same
+<br><br>
+The reviewers will be notified of the pull request and the after reviewing will merge the pull request into the main branch
