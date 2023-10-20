@@ -76,66 +76,53 @@ body{
 
 /*----------------------------------------------------------header section start ------------------------------------*/
 
-header{
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top:0; left: 0;
-    z-index: 1000;
-    padding:2rem 7%;
-    background:var(--blue);
-}
 
-header .logo{
-    font-size: 2.5rem;
-    color:#fff;
-}
-
-header .logo i{
-    padding:0 .5rem;
-}
-
-header .navbar ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-}
-
-header .navbar ul li a{
-    font-size: 2rem;
-    margin-left: 3rem;
-    color:#fff;
-    position: relative;
-}
-
-header .navbar ul li a::before{
-    content: '';
-    position: absolute;
-    bottom:-.5rem; right:0;
-    width:0%;
-    height:.2rem;
-    background:#fff;
-    transition: .2s linear;
-}
-
-header .navbar ul li a:hover::before{
-    left:0;
-    width:100%;
-}
-
-header #menu{
-    font-size: 3rem;
-    color:#fff;
-    cursor: pointer;
-    display: none;
-}
 
 /*---------------------------------------------------------header section end ----------------------------------------*/
+header{
+    background-color: var(--blue);
+    position: fixed;
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:60px;
 
-
+}
+.nav-link{
+    transition: 0.7s ease;
+    font-size: 20px;
+}
+.nav-link:hover{
+    letter-spacing: 2px;
+    
+}
+#menu{
+    display: none;
+    cursor:pointer;
+}
+.logo i{
+    font-size: 30px;
+}
+.logo{
+    font-size: 30px;
+}
 
 /*----------------------------------------------------------home section start --------------------------------------*/
 
@@ -154,7 +141,6 @@ header #menu{
 
 .home .image{
     flex:1 1 40rem;
-    padding-top: 1rem;
 }
 
 .home .image img{
@@ -163,12 +149,13 @@ header #menu{
 
 .home .content{
     flex:1 1 40rem;
-    padding-top: 5rem;
+    padding-top: 5rem ;
 }
 
 .home .content h1{
     font-size: 4rem;
     color:#fff;
+    padding-right:59px;
 }
 
 .home .content p{
@@ -376,6 +363,7 @@ form{
    box-sizing: border-box;
    /*display: flex;
    flex-direction: column;*/
+   
 }
 
 h1{
@@ -412,13 +400,22 @@ input[type="text"]:focus, textarea:focus{
     }
 
     .contact form .btn{
-        width:200px ;
+        max-width:200px ;
+        margin-top: 3rem;
     }
 
     .contact form .btn:hover{
         background:#fff;
         color:#333;
         
+    }
+
+    .error{
+        color:red;
+    }
+
+    .error-border{
+        border-bottom: 2px solid red;
     }
     
 /*----------------------------------------contact section end ------------------------------------------------------*/
@@ -506,45 +503,46 @@ letter-spacing: 1px;
     html{
         font-size: 55%;
     }
+    header{
+        height: 30px;
+    }
 
-    header #menu{
+    .navbar #menu{
         display: block;
     }
     
-    header .navbar{
-        position: fixed;
-        top:-120%; left:0;
+    .nav-menu{
+        position:fixed;
+        top:70px; left:-100%;
+        gap: 0;
         width:100%;
-        background:#fff;
-        opacity: 0;
-    }
-
-    header .navbar ul{
-        padding:2rem 0;
-        flex-flow: column;
+        background-color: black;
+        z-index: 100;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        transition:0.3s;
+       
     }
 
-    header .navbar ul li a{
-        font-size: 2.5rem;
-        color:#333;
-        display: block;
-        margin:1rem 0;
+    .nav-item{
+        margin:16px 0;
     }
 
-    header .navbar ul li a::before{
-        background:#333;
+    .nav-menu.active{
+        left:0;
+    }
+
+    #menu{
+        font-size: 20px;
+        color: white;
     }
 
     .fa-times{
         transform: rotate(180deg);
     }
 
-    header .navbar.nav-toggle{
-        top:7.4rem;
-        opacity: 1;
-    }
-
+    
     .home .content{
         text-align: center;
     }
