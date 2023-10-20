@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="icon" href="img/sg.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <nav id="nav-bar">
+            <div class="logo-container">
+                <img src="img/equilizer.jpg" alt="" id="header-img" class="logo">
+            </div>
+            <div class="container">
+              
+
+                <ul class="links">
+                    <li class="nav-link"><a href="#hero">home</a></li>
+                    <li class="nav-link"><a href="#features">features</a></li>
+                    <li class="nav-link"><a href="#video">video</a></li>
+                    <li class="nav-link"><a href="#products">products</a></li>
+                    <li class="nav-link"><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+                           
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Did u Love Beat!</h1>
+            <button><a href="#features">know more</a></button>
+        </div>
+    </div>
+                        
+    <div class="features" id="features">
+        <h2>Features</h2>
+      
+        <div class="feature">
+            <figure><img src="img/noise cancellation.svg" alt="mute icon"/>
+            </figure>
+            <figcaption><h3>Complete Noise Cancellation</h3></figcaption>
+            <p>
+                Enjoy crystal-clear audio, whether you're in a crowded commute or a noisy office environment. Elevate your listening experience with our noise-canceling earphones.
+            </p>
+        </div>
+
+        <div class="feature">
+            <figure><img src="img/comfort.svg" alt="feather icon"/>
+            </figure>
+            <figcaption><h3>Ultimate Comfort</h3></figcaption>
+            <p>
+                Experience ultimate comfort with our earphones, making them the perfect companion for your everyday activities.
+            </p>
+        </div>
+
+        <div class="feature">
+            <figure><img src="img/wireless-headphone.svg" alt="headphone icon"/>
+            </figure>
+            <figcaption><h3>Wireless Freedom</h3></figcaption>
+            <p>
+                Experience the true essence of wireless freedom with our exceptional earphones. 
+            </p>
+        </div>
+
+        <div class="feature">
+            <figure><img src="img/premium.svg" alt="crown icon"/>
+            </figure>
+            <figcaption><h3>Premium Sound</h3></figcaption>
+            <p>
+                Elevate your audio experience to new heights with our earphones, delivering premium sound quality that transcends expectations.
+            </p>
+        </div>
+  
+    </div>
+
+                    
+    <div class="video" id="video">
+        <h3>Video of displaying our Product</h3>
+        <iframe src="https://www.youtube.com/embed/T2mvSWNc8yk" id="video"></iframe>
+    </div>
+
+                     
+    <div class="products" id="products">
+        <h2>products</h2>
+        
+        <p class="sub-heading">these are our bestsellers</p>
+        <div class="product">
+            <h3>Rockerz 235 Pro</h3>
+            <span>&#8377; 1,990</span>
+            <p>
+                Wireless Bluetooth Neckband with Up To 20 Hours Playback, BEAST™ Mode, ENx™ Technology
+            </p>
+            <button><a href="#">buy now</a></button>
+        </div>
+
+        <div class="product">
+            <h3>Rockerz 333 ANC</h3>
+            <span>&#8377; 990</span>
+            <p>
+                Bluetooth Neckband with 13mm Drivers, DIRAC OpteoTM, Active Noise Cancelling 
+            </p>
+            <button><a href="#">buy now</a></button>
+        </div>
+
+        <div class="product">
+            <h3>TRebel Rockerz 235 V2</h3>
+            <span>&#8377; 699</span>
+            <p>
+                Wireless Earphones with 10mm Drivers, 8 Hours Music Playback, Single Command Assist, Fast Charging
+            </p>
+            <button><a href="#">buy now</a></button>
+        </div>
+    </div>
+
+                    
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+      
+        <form action ="inde.html" name="myForm" id="form"  method="post">
+            <div class="input-control">
+                <label for="name"> Enter Your Name:</label>
+               <input type="text" id="name" name="fname" placeholder="Enter your name here:" required>
+               <span class="formerror"> </span>
+            </div>
+    
+            <div class="input-control" >
+                <label for="mail">  Enter Your Email: </label>
+            <input type="email" name="femail" id="mail" placeholder="sachendra@gmail.com" pattern=".+@gmail.com" minlength="4" maxlength="30" required>
+            <span class="formerror"> </span>
+            </div>
+            <div class="input-control">
+                <label for="subject">Enter Your Subject:</label>
+                <input type="text" id="subject" name="fsubject" placeholder="Enter subject here:" required>
+                <span class="formerror"> </span>
+            </div>
+            <div class="input-control" >
+                <label for="comment"> Enter your Comment:</label>
+               <input type="text" id="comment" name="fcomment" placeholder="Enter your comment:" required>
+               <span class="formerror"> </span>
+             </div>
+             
+    
+             <div id="button"><button type="button" onclick="validateForm()">Submit</button> </div>
+    
+        </form>
+            
+        <div class="social-link"> 
+            <a href="#"><img src="img/twitter.svg" alt="twitter logo"></a>
+             <a href="" target="_blank"><img src="img/github.svg" alt="github logo"></a>
+             <a href="" target="_blank"><img src="img/linkedin.svg" alt="linkedin logo"></a>
+         </div>
+     </div>
+    
+      
+    <script src="index.js" ></script>
+</body>
+
+</html>
