@@ -1,10 +1,11 @@
 const express = require('express');
+require('dotenv').config();
+const port = process.env.port || 3000;
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
 const ChannelModel = require('./models/channel')
-const dbUrl = "mongodb+srv://ananyajain:ananyaJAIN123@cluster0.j0todxb.mongodb.net/myDataBase?retryWrites=true&w=majority"
-
+const dbUrl = process.env.url;
 
 // mongo
 const connectionParams = {
@@ -24,7 +25,7 @@ mongoose
 var path = require('path');
 
 const app = express();
-const port = 3000;
+
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // form
 app.get("/contact", function(req,res){
   console.log("get");
-  res.sendFile("C:/Users/HP/Documents/Ananya/landing-page/landingPage/contact.html");
+  res.sendFile('public/contact.html' , { root : __dirname});
   
 
   
@@ -86,7 +87,7 @@ let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'ananyajain866@gmail.com',
-    pass: 'ultwytbwkcgvbmmj'
+    pass: `${process.env.pass}`
   }
 });
 
@@ -109,7 +110,7 @@ transporter.sendMail(mailOptions,(error, info) => {
   }
 })
 
-// res.send('<p>Message sent successfully! Thank you for contacting us.</p>');
+
 
 
 
