@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cupcakes<span>FAQ</span></h1>
+    <header>
+
+
+    </header>
+    <h2>FAQ</h2>
+    <div class="glass-container">
+      <h3>Frequently Asked Questions</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false">
+            <span class="accordion-title">What is a cupcake?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A cupcake is a small, individual-sized cake that is typically baked in a paper or aluminum cup. It's a
+              popular dessert or snack often enjoyed at parties and special occasions.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">How do I store cupcakes to keep them fresh?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Store cupcakes in an airtight container at room temperature for a day or two. For longer storage, you can
+              refrigerate them, but be sure to bring them to room temperature before serving to maintain their texture.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">How can I make my cupcakes moist and fluffy?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Use quality ingredients, don't overmix the batter, and bake at the recommended temperature and time. You
+              can also add buttermilk, yogurt, or sour cream to keep them moist.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">Are there any low-sugar cupcake options for health-conscious
+              individuals?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              You can use natural sweeteners like honey or applesauce and reduce the sugar content in your cupcake
+              recipes for a healthier option.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">Are there any tips for making decorative frosting designs?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              <b> Using a piping bag with different tips allows you to create various frosting designs. You can practice
+                on a flat surface before decorating the cupcakes.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const items = document.querySelectorAll('.accordion button');
+
+    function toggleAccordion() {
+      const itemToggle = this.getAttribute('aria-expanded');
+
+      for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+      }
+
+      if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    items.forEach((item) => item.addEventListener('click', toggleAccordion));
+  </script>
+</body>
+
+</html>
+</body>
+
+</html>
