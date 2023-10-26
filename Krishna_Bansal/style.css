@@ -1,0 +1,238 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body{
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+*{   padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+  
+section{
+    
+   
+    position: absolute ;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding: 100px;
+    justify-content: space-between;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a img{
+margin-left: -85px;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+
+    display: inline-block;
+    margin-left: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #474747;
+
+    border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in;;
+    
+
+}
+header ul li a:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    transition: 0.2s ease-in;
+}
+   .container{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.content{
+    position: relative;
+    width: 50%;
+    margin-top: 50px;
+}
+.content h1{
+    font-size: 5em;
+    color: blue;
+    font-weight: normal;
+}
+.content h1 span{
+   color: #D7004D;
+   font-weight: bold;
+}
+.content h2{
+    color: #2E2E2E;
+    line-height: 25px;
+}
+.content p{
+    position: relative;
+    color: #363636;
+    padding-top: 20px;
+    font-size: 1rem;
+}
+.content a{
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    background: #D7004D;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-top: 17px;
+
+
+}
+.content a:hover {
+  background-color: rgb(238, 47, 158);
+}
+
+.products img{
+    transform: rotate(7deg);
+    
+}
+.click li{
+    list-style: none;
+}
+.click img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 30px 0px 0px 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.click img:hover{
+    transform: translateX(-15px);
+}
+.ball{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    clip-path: circle(500px at right 600px);
+    background: rgb(170, 128, 128);
+}
+input[type=text], select, textarea {
+    background-color: transparent;
+    width: 100%; 
+    padding: 12px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical
+  }
+  
+ 
+  input[type=submit] {
+    background-color: #00df8d;
+    color: rgb(206, 124, 174);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+
+  input[type=submit]:hover {
+    background-color: #c814d8;
+  }
+  
+ 
+
+ h1{
+     text-align: center;
+  font-size: 48px;
+  color: whitesmoke;
+  
+  display:flex;
+   justify-content:center;
+   
+  
+  
+  
+  margin-top: 16px;
+ 
+  font-family:sans-serif;
+  ;
+}
+.container{
+justify-content: center;
+margin-top: -12px;
+
+
+}
+#lname{
+    background-color: transparent;
+    padding:1.5%
+    
+}
+input{
+    width:100%;
+    border:3px solid white;
+}
+form label{
+    font-size:large;}
+    
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 50px 20px; 
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header a img {
+        margin-left: 0;
+    }
+
+    header ul {
+        display: none; 
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .click img {
+        margin: 0 auto;
+    }
+}
+.nav ul{
+    font-size: 1.5rem;
+}
